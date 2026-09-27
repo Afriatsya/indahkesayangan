@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#be123c">
+<title>Untukmu, Sayang ❤️</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config={theme:{extend:{fontFamily:{
+display:['Cormorant Garamond','serif'],sans:['Poppins','sans-serif']
+},colors:{love:{50:'#fff1f2',100:'#ffe4e6',200:'#fecdd3',300:'#fda4af',400:'#fb7185',500:'#f43f5e',600:'#e11d48',700:'#be123c',900:'#881337'}}}}}
+</script>
+<style>
+html{scroll-behavior:smooth}
+body{font-family:Poppins,sans-serif}
+.font-display{font-family:'Cormorant Garamond',serif}
+.hero{background:radial-gradient(circle at 20% 20%,rgba(244,63,94,.18),transparent 28%),radial-gradient(circle at 80% 30%,rgba(251,113,133,.18),transparent 30%),linear-gradient(135deg,#fff1f2,#fff 55%,#ffe4e6)}
+.glass{background:rgba(255,255,255,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.float{animation:float 5s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-12px)}}
+.pulse-heart{animation:pulseHeart 1.5s infinite}
+@keyframes pulseHeart{0%,100%{transform:scale(1)}15%{transform:scale(1.18)}30%{transform:scale(1)}45%{transform:scale(1.1)}}
+.fade{animation:fade .9s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+.photo{transition:.35s}
+.photo:hover{transform:translateY(-8px) rotate(-1deg);box-shadow:0 25px 50px rgba(136,19,55,.15)}
+.falling-heart{position:fixed;top:-40px;z-index:60;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:.15}}
+.glow{box-shadow:0 0 40px rgba(244,63,94,.25)}
+.modal{transition:opacity .3s,visibility .3s}
+.modal.hidden2{opacity:0;visibility:hidden}
+</style>
+</head>
+<body class="bg-love-50 text-slate-700">
+
+<!-- OPENING -->
+<div id="opening" class="fixed inset-0 z-[100] hero flex items-center justify-center px-6 transition-all duration-700">
+  <div class="text-center max-w-xl fade">
+    <div class="text-7xl pulse-heart inline-block">❤️</div>
+    <p class="uppercase tracking-[.35em] text-xs font-bold text-love-600 mt-8">A little website for</p>
+    <h1 class="font-display text-6xl md:text-8xl font-semibold text-love-900 mt-3">Untuk <span id="openName">Sayang</span></h1>
+    <p class="mt-5 text-slate-500 leading-7">Ada sesuatu yang ingin kusampaikan kepadamu...</p>
+    <button onclick="enterLove()" class="mt-9 bg-love-600 hover:bg-love-700 text-white rounded-full px-8 py-4 font-semibold shadow-xl shadow-love-500/25 transition">
+      Buka untukku ❤️
+    </button>
+    <p class="text-xs text-slate-400 mt-5">Sebaiknya buka dengan volume yang nyaman 🎵</p>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="fixed top-0 left-0 right-0 z-50 px-3 sm:px-5 pt-3">
+<nav class="max-w-6xl mx-auto glass border border-white rounded-full shadow-lg px-4 sm:px-6 py-3 flex items-center justify-between">
+<a href="#home" class="font-display font-bold text-xl sm:text-2xl text-love-800">Our Story <span>♥</span></a>
+<div class="hidden lg:flex gap-6 text-sm font-medium">
+<a href="#cerita" class="hover:text-love-600">Cerita</a>
+<a href="#tentang" class="hover:text-love-600">Tentang Dia</a>
+<a href="#timeline" class="hover:text-love-600">Perjalanan</a>
+<a href="#galeri" class="hover:text-love-600">Galeri</a>
+<a href="#surat" class="hover:text-love-600">Surat</a>
+</div>
+<div class="flex items-center gap-2">
+<button onclick="toggleMusic()" id="musicBtn" class="w-10 h-10 rounded-full bg-love-100 text-love-700 hover:bg-love-200 transition" title="Musik">🎵</button>
+<a href="#surat" class="hidden sm:inline-block bg-love-600 text-white px-4 py-2 rounded-full text-xs sm:text-sm font-semibold">Surat 💌</a>
+</div>
+</nav>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="home" class="hero min-h-screen flex items-center overflow-hidden">
+<div class="max-w-6xl mx-auto px-5 pt-28 pb-16 grid lg:grid-cols-2 gap-12 items-center w-full">
+<div class="fade">
+<p class="text-love-600 uppercase tracking-[.3em] text-xs font-bold">Untuk perempuan yang kucintai</p>
+<h2 class="font-display text-6xl sm:text-7xl md:text-8xl leading-[.85] text-love-900 mt-5">Kamu adalah <em class="text-love-600">rumah</em> yang ingin selalu kutuju.</h2>
+<p class="mt-7 text-slate-600 leading-8 max-w-xl">Meskipun kamu sedang jauh di Mimika, ada satu hal yang tidak pernah ikut menjauh: rasa sayangku kepadamu.</p>
+<div class="flex flex-wrap gap-3 mt-8">
+<a href="#cerita" class="bg-love-600 text-white px-6 py-3.5 rounded-full font-semibold shadow-lg shadow-love-500/20">Cerita kita →</a>
+<button onclick="loveButton()" class="border border-love-200 bg-white/70 text-love-700 px-6 py-3.5 rounded-full font-semibold">Aku Sayang Kamu ❤️</button>
+</div>
+</div>
+<div class="flex justify-center relative">
+<div class="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full border border-love-200"></div>
+<div class="absolute w-60 h-60 sm:w-80 sm:h-80 rounded-full border border-love-200/70"></div>
+<div class="w-64 h-80 sm:w-80 sm:h-[460px] rounded-[8rem] overflow-hidden border-8 border-white shadow-2xl rotate-2 relative z-10">
+<img src="457876620_1188999569033336_1679265365478040595_n.jpg" onerror="this.src='https://placehold.co/700x900/ffe4e6/be123c?text=Foto+Kalian+❤️'" class="w-full h-full object-cover" alt="Foto utama">
+</div>
+<div class="absolute z-20 bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 glass rounded-2xl px-5 py-4 shadow-xl text-center whitespace-nowrap float">
+<p class="font-display text-xl text-love-800">"Tetap kamu."</p><p class="text-xs text-slate-500">pilihanku setiap hari.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CERITA -->
+<section id="cerita" class="py-24 bg-white">
+<div class="max-w-5xl mx-auto px-5">
+<div class="text-center max-w-2xl mx-auto">
+<p class="text-love-600 uppercase tracking-[.25em] text-xs font-bold">Our love story</p>
+<h2 class="font-display text-5xl sm:text-6xl text-love-900 mt-2">Kenapa aku mencintaimu?</h2>
+<p class="text-slate-500 mt-4 leading-7">Karena kamu tidak hanya hadir. Kamu membuat hidupku terasa punya cerita yang lebih indah.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-5 mt-14">
+<div class="p-7 rounded-3xl bg-love-50 border border-love-100"><span class="text-4xl">🌷</span><h3 class="font-display text-3xl text-love-900 mt-4">Senyummu</h3><p class="text-sm leading-7 text-slate-600 mt-2">Ada sesuatu dari senyummu yang selalu bisa membuat hari yang biasa menjadi terasa istimewa.</p></div>
+<div class="p-7 rounded-3xl bg-white border border-love-100 shadow-lg shadow-love-900/5"><span class="text-4xl">✨</span><h3 class="font-display text-3xl text-love-900 mt-4">Perjuanganmu</h3><p class="text-sm leading-7 text-slate-600 mt-2">Aku kagum melihatmu terus bekerja, bertahan, dan menjalani hari-hari di Mimika dengan caramu sendiri.</p></div>
+<div class="p-7 rounded-3xl bg-love-50 border border-love-100"><span class="text-4xl">❤️</span><h3 class="font-display text-3xl text-love-900 mt-4">Dirimu</h3><p class="text-sm leading-7 text-slate-600 mt-2">Bukan karena kamu sempurna. Aku mencintaimu karena kamu adalah kamu.</p></div>
+</div>
+</div>
+</section>
+
+<!-- TENTANG DIA -->
+<section id="tentang" class="py-24 bg-love-50">
+<div class="max-w-6xl mx-auto px-5 grid lg:grid-cols-2 gap-14 items-center">
+<div class="grid grid-cols-2 gap-4">
+<img src="Screenshot 2026-09-27 131047.png" onerror="this.src='https://placehold.co/600x800/ffe4e6/be123c?text=Foto+Dia+1'" class="w-full h-64 sm:h-80 object-cover rounded-[2rem] shadow-xl mt-10" alt="Dia">
+<img src="Screenshot 2026-09-27 131239.png" onerror="this.src='https://placehold.co/600x800/fecdd3/881337?text=Foto+Dia+2'" class="w-full h-72 sm:h-96 object-cover rounded-[2rem] shadow-xl" alt="Dia">
+</div>
+<div>
+<p class="text-love-600 uppercase tracking-[.25em] text-xs font-bold">Tentang dia</p>
+<h2 class="font-display text-5xl sm:text-6xl text-love-900 leading-none mt-3">Perempuan hebat yang sedang berjuang di Mimika.</h2>
+<p class="mt-7 leading-8 text-slate-600">Dia bekerja sebagai <strong class="text-love-700">kasir di Mimika</strong>. Mungkin ada hari yang melelahkan, ada saat ketika pekerjaan terasa berat, tetapi bagiku dia tetap seseorang yang hebat dan layak mendapatkan apresiasi.</p>
+<div class="mt-8 flex flex-wrap gap-3">
+<span class="bg-white border border-love-100 rounded-full px-4 py-2 text-sm">🌷 Cantik</span>
+<span class="bg-white border border-love-100 rounded-full px-4 py-2 text-sm">✨ Hebat</span>
+<span class="bg-white border border-love-100 rounded-full px-4 py-2 text-sm">💪 Pekerja keras</span>
+<span class="bg-white border border-love-100 rounded-full px-4 py-2 text-sm">❤️ Berharga</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- COUNTDOWN -->
+<section id="timeline" class="py-24 bg-white">
+<div class="max-w-5xl mx-auto px-5 text-center">
+<p class="text-love-600 uppercase tracking-[.25em] text-xs font-bold">Our special day</p>
+<h2 class="font-display text-5xl sm:text-6xl text-love-900 mt-2">Menuju hari anniversary kita ❤️</h2>
+<p class="text-slate-500 mt-4">Ubah tanggal anniversary di bagian konfigurasi JavaScript.</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5 max-w-3xl mx-auto mt-12">
+<div class="bg-love-50 border border-love-100 rounded-3xl p-5"><div id="days" class="font-display text-5xl sm:text-6xl font-bold text-love-700">0</div><p class="text-xs uppercase tracking-widest text-slate-400 mt-2">Hari</p></div>
+<div class="bg-love-50 border border-love-100 rounded-3xl p-5"><div id="hours" class="font-display text-5xl sm:text-6xl font-bold text-love-700">0</div><p class="text-xs uppercase tracking-widest text-slate-400 mt-2">Jam</p></div>
+<div class="bg-love-50 border border-love-100 rounded-3xl p-5"><div id="minutes" class="font-display text-5xl sm:text-6xl font-bold text-love-700">0</div><p class="text-xs uppercase tracking-widest text-slate-400 mt-2">Menit</p></div>
+<div class="bg-love-50 border border-love-100 rounded-3xl p-5"><div id="seconds" class="font-display text-5xl sm:text-6xl font-bold text-love-700">0</div><p class="text-xs uppercase tracking-widest text-slate-400 mt-2">Detik</p></div>
+</div>
+<div class="mt-14 max-w-3xl mx-auto grid md:grid-cols-3 gap-5 text-left">
+<div class="p-5 border-l-4 border-love-400 bg-love-50"><b class="text-love-800">Pertama bertemu</b><p class="text-sm text-slate-500 mt-2">Isi cerita singkat kalian di sini.</p></div>
+<div class="p-5 border-l-4 border-love-400 bg-love-50"><b class="text-love-800">Mulai bersama</b><p class="text-sm text-slate-500 mt-2">Isi tanggal atau momen jadian kalian.</p></div>
+<div class="p-5 border-l-4 border-love-400 bg-love-50"><b class="text-love-800">Hari ini</b><p class="text-sm text-slate-500 mt-2">Masih memilih dan menjaga satu sama lain.</p></div>
+</div>
+</div>
+</section>
+
+<!-- GALERI -->
+<section id="galeri" class="py-24 bg-love-50">
+<div class="max-w-6xl mx-auto px-5">
+<div class="text-center mb-12"><p class="text-love-600 uppercase tracking-[.25em] text-xs font-bold">Memories</p><h2 class="font-display text-5xl sm:text-6xl text-love-900 mt-2">Galeri kenangan kita</h2><p class="text-slate-500 mt-3">Masukkan foto asli kalian ke folder <b>images</b>.</p></div>
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+<script>
+const photos=[1,2,3,4,5,6];
+document.write(photos.map((n,i)=>`<div class="photo bg-white p-3 rounded-3xl border border-love-100 shadow-lg ${i%3===1?'sm:translate-y-7':''}">
+<img src="Screenshot 2026-09-27 131325.png" onerror="this.src='https://placehold.co/700x900/${i%2?'fecdd3/881337':'ffe4e6/be123c'}?text=Kenangan+${n}" class="w-full h-80 object-cover rounded-2xl" alt="Kenangan ${n}">
+<div class="p-3"><p class="font-display text-2xl text-love-900">${['Senyummu','Momen kita','Jarak bukan akhir','Favoritku','Rindu','Selamanya'][i]}</p><p class="text-xs text-slate-400">Satu foto, satu cerita.</p></div></div>`).join(''));
+</script>
+</div>
+</div>
+</section>
+
+<!-- SURAT -->
+<section id="surat" class="py-24 bg-white">
+<div class="max-w-4xl mx-auto px-5">
+<div class="bg-love-50 rounded-[2rem] p-7 sm:p-12 md:p-16 border border-love-100 shadow-xl">
+<div class="text-center"><div class="text-5xl pulse-heart inline-block">💌</div><p class="text-love-600 uppercase tracking-[.25em] text-xs font-bold mt-5">A letter for you</p><h2 class="font-display text-5xl sm:text-6xl text-love-900 mt-2">Untukmu, sayang</h2></div>
+<div class="font-display text-xl sm:text-2xl leading-9 sm:leading-10 text-slate-600 mt-10">
+<p>Sayang,</p>
+<p class="mt-5">Kalau suatu hari kamu merasa lelah dengan pekerjaanmu, dengan jarak, atau dengan hari yang terasa terlalu berat, ingatlah bahwa ada seseorang di sini yang selalu bangga kepadamu.</p>
+<p class="mt-5">Aku tahu bekerja sebagai kasir di Mimika bukan berarti setiap hari selalu mudah. Mungkin ada lelah yang tidak sempat kamu ceritakan. Tapi aku ingin kamu tahu bahwa perjuanganmu tidak pernah luput dari perhatianku.</p>
+<p class="mt-5">Mimika mungkin jauh. Kita mungkin tidak bisa bertemu setiap saat. Tapi jarak tidak membuat rasa ini menjadi lebih kecil. Justru setiap rindu membuatku semakin sadar betapa berharganya kamu.</p>
+<p class="mt-5">Aku tidak menjanjikan hubungan yang selalu sempurna. Aku hanya ingin terus belajar mencintaimu, mendengarkanmu, menjagamu, dan menjadi seseorang yang bisa kamu percaya.</p>
+<p class="mt-5">Terima kasih karena sudah hadir di hidupku. Terima kasih untuk senyum, perhatian, cerita, tawa, dan semua hal kecil yang mungkin menurutmu biasa tetapi berarti besar bagiku.</p>
+<p class="mt-5 font-semibold text-love-700">Aku mencintaimu. Hari ini, besok, dan setiap kali aku masih diberi kesempatan untuk memilihmu. ❤️</p>
+</div>
+<div class="border-t border-love-200 mt-10 pt-7 text-center"><p class="text-sm text-slate-400">Dari seseorang yang selalu merindukanmu,</p><p class="font-display text-3xl text-love-700 mt-2">Untukmu, selamanya. ❤️</p></div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 bg-love-900 text-white text-center">
+<div class="max-w-3xl mx-auto px-5">
+<div class="text-6xl pulse-heart inline-block">❤️</div>
+<h2 class="font-display text-5xl sm:text-7xl mt-5">Aku sayang kamu.</h2>
+<p class="text-love-100/80 leading-8 mt-5">Sejauh apa pun jaraknya, namamu tetap punya tempat paling dekat di hatiku.</p>
+<button onclick="loveButton()" class="mt-8 bg-white text-love-700 px-8 py-4 rounded-full font-bold hover:scale-105 transition shadow-xl">Aku Juga Sayang Kamu ❤️</button>
+</div>
+</section>
+</main>
+
+<footer class="bg-love-950 text-love-200 py-10 text-center">
+<p class="font-display text-2xl">Our Little Love Story ♥</p>
+<p class="text-xs text-love-300/60 mt-2">Dibuat dengan cinta untuk seseorang yang istimewa di Mimika.</p>
+</footer>
+
+<!-- LOVE MODAL -->
+<div id="loveModal" class="modal hidden2 fixed inset-0 z-[90] bg-black/50 flex items-center justify-center p-5">
+<div class="bg-white rounded-[2rem] p-8 sm:p-12 text-center max-w-md shadow-2xl">
+<div class="text-6xl pulse-heart inline-block">💗</div>
+<h3 class="font-display text-4xl text-love-900 mt-5">Aku juga sayang kamu!</h3>
+<p class="text-slate-500 leading-7 mt-4">Tidak peduli seberapa jauh Mimika dari sini, kamu tetap dekat di hatiku.</p>
+<button onclick="closeLove()" class="mt-7 bg-love-600 text-white rounded-full px-7 py-3 font-semibold">Tutup ❤️</button>
+</div>
+</div>
+
+<audio id="music" loop>
+<source src="music/lagu-kita.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+/* =========================
+   KONFIGURASI MUDAH DIUBAH
+   ========================= */
+const CONFIG={
+  namaPacar:"Indah",
+  anniversary:"2027-09-27T00:00:00"
+};
+
+/* Nama pacar */
+document.getElementById("openName").textContent=CONFIG.namaPacar;
+
+/* Opening */
+function enterLove(){
+  const o=document.getElementById("opening");
+  o.style.opacity="0";
+  setTimeout(()=>o.style.display="none",700);
+  startHearts();
+  // Browser biasanya hanya mengizinkan audio setelah klik pengguna.
+  const a=document.getElementById("music");
+  a.play().then(()=>document.getElementById("musicBtn").textContent="🔊").catch(()=>{});
+}
+
+/* Musik */
+function toggleMusic(){
+  const a=document.getElementById("music"), b=document.getElementById("musicBtn");
+  if(a.paused){a.play().then(()=>b.textContent="🔊").catch(()=>alert("Tambahkan file music/lagu-kita.mp3 terlebih dahulu."));}
+  else{a.pause();b.textContent="🎵";}
+}
+
+/* Tombol cinta */
+function loveButton(){
+  document.getElementById("loveModal").classList.remove("hidden2");
+  for(let i=0;i<16;i++) setTimeout(createHeart,i*80);
+}
+function closeLove(){document.getElementById("loveModal").classList.add("hidden2");}
+
+/* Hati jatuh */
+function createHeart(){
+  const h=document.createElement("div");
+  h.className="falling-heart";
+  h.textContent=["❤️","💗","💕","💖","💘"][Math.floor(Math.random()*5)];
+  h.style.left=Math.random()*100+"vw";
+  h.style.fontSize=(12+Math.random()*22)+"px";
+  h.style.animationDuration=(3+Math.random()*5)+"s";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),8500);
+}
+function startHearts(){
+  setInterval(createHeart,1200);
+}
+
+/* Countdown */
+function updateCountdown(){
+  const target=new Date(CONFIG.anniversary).getTime();
+  let diff=target-Date.now();
+  if(diff<0){
+    const next=new Date(CONFIG.anniversary);
+    const now=new Date();
+    next.setFullYear(now.getFullYear()+1);
+    diff=next.getTime()-Date.now();
+  }
+  const d=Math.floor(diff/86400000); diff%=86400000;
+  const h=Math.floor(diff/3600000); diff%=3600000;
+  const m=Math.floor(diff/60000); diff%=60000;
+  const s=Math.floor(diff/1000);
+  document.getElementById("days").textContent=d;
+  document.getElementById("hours").textContent=h;
+  document.getElementById("minutes").textContent=m;
+  document.getElementById("seconds").textContent=s;
+}
+updateCountdown(); setInterval(updateCountdown,1000);
+</script>
+</body>
+</html>
